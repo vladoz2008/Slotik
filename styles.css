@@ -1,15 +1,16 @@
 :root {
-  --bg: #f7f4ff;
-  --bg-soft: #efe9ff;
+  --bg: #f7faf9;
+  --bg-soft: #eef6f2;
   --surface: #ffffff;
-  --surface-soft: #f6f1ff;
-  --text: #2a1f57;
-  --muted: #6d6098;
-  --primary: #7e3ff2;
-  --primary-hover: #6d35d4;
-  --secondary: #9d71ff;
-  --border: #dfd2ff;
-  --shadow: 0 14px 35px rgba(126, 63, 242, 0.12);
+  --surface-soft: #f2f7f6;
+  --text: #1e293b;
+  --muted: #526173;
+  --primary: #245bff;
+  --primary-hover: #1e49c8;
+  --secondary: #0f766e;
+  --accent: #f59e0b;
+  --border: #d7e2df;
+  --shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
   --max-width: 1120px;
 }
 
@@ -28,8 +29,7 @@ body {
 body {
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
   background:
-    radial-gradient(1000px 580px at -10% -20%, #efe6ff 0%, transparent 65%),
-    radial-gradient(900px 500px at 110% 0%, #efe2ff 0%, transparent 60%),
+    linear-gradient(180deg, #f7faf9 0%, #eef6f2 100%),
     var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -45,8 +45,8 @@ body {
   top: 0;
   z-index: 100;
   backdrop-filter: blur(8px);
-  background: rgba(247, 244, 255, 0.86);
-  border-bottom: 1px solid rgba(223, 210, 255, 0.95);
+  background: rgba(247, 250, 249, 0.9);
+  border-bottom: 1px solid rgba(215, 226, 223, 0.95);
 }
 
 .nav {
@@ -86,9 +86,9 @@ body {
   display: inline-flex;
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
-  border: 1px solid #d8c8ff;
-  color: var(--muted);
-  background: rgba(126, 63, 242, 0.08);
+  border: 1px solid #c7d8d4;
+  color: var(--secondary);
+  background: rgba(15, 118, 110, 0.08);
   font-size: 0.92rem;
 }
 
@@ -128,7 +128,7 @@ p {
 .cta {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 8px;
   padding: 1.15rem;
   box-shadow: var(--shadow);
 }
@@ -142,8 +142,8 @@ p {
 }
 
 .section--accent {
-  background: linear-gradient(180deg, #f5f0ff 0%, #f8f4ff 100%);
-  border-block: 1px solid #e9ddff;
+  background: #edf7f4;
+  border-block: 1px solid #d7e7e1;
 }
 
 .section__lead {
@@ -172,16 +172,16 @@ p {
 }
 
 .audience-card {
-  background: #f2ebff;
-  border: 1px solid #d9c9ff;
-  border-radius: 18px;
+  background: #f9fbfb;
+  border: 1px solid #d7e2df;
+  border-radius: 8px;
   padding: 1.2rem;
   box-shadow: var(--shadow);
 }
 
 .audience-card h3 {
   margin-bottom: 0.95rem;
-  color: #38237b;
+  color: #17346f;
 }
 
 .audience-block + .audience-block {
@@ -191,17 +191,17 @@ p {
 .audience-block h4 {
   margin: 0 0 0.35rem;
   font-size: 1.08rem;
-  color: #7e3ff2;
+  color: var(--secondary);
 }
 
 .audience-block ul {
   margin: 0;
   padding-left: 1.2rem;
-  color: #4f3d84;
+  color: #334155;
 }
 
 .audience-block p {
-  color: #4f3d84;
+  color: #334155;
 }
 
 .btn {
@@ -230,18 +230,18 @@ p {
 .btn--ghost {
   color: var(--primary);
   border-color: var(--border);
-  background: rgba(126, 63, 242, 0.08);
+  background: rgba(36, 91, 255, 0.08);
 }
 
 .btn--secondary:hover,
 .btn--ghost:hover {
-  background: rgba(126, 63, 242, 0.14);
+  background: rgba(36, 91, 255, 0.14);
 }
 
 .cta {
   text-align: center;
   padding: 2rem 1rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f6f0ff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f0f7f5 100%);
 }
 
 .cta p {
@@ -250,8 +250,8 @@ p {
 }
 
 .footer {
-  border-top: 1px solid #e5d8ff;
-  background: #f8f3ff;
+  border-top: 1px solid #d7e2df;
+  background: #f1f7f5;
 }
 
 .footer__inner {
@@ -269,12 +269,64 @@ p {
 }
 
 .link {
-  color: #6d57b5;
+  color: var(--secondary);
   text-decoration: none;
 }
 
 .link:hover {
   color: var(--primary);
+}
+
+.survey-hero {
+  padding: 4.8rem 0 1.7rem;
+}
+
+.survey-form {
+  width: min(760px, calc(100% - 2rem));
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.survey-form fieldset,
+.field {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.survey-form legend,
+.field span {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.survey-form label {
+  color: #334155;
+}
+
+.survey-form input[type="text"],
+.survey-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  color: var(--text);
+  background: #fbfefd;
+}
+
+.survey-form button {
+  justify-self: start;
+}
+
+.form-note {
+  min-height: 1.5rem;
+  color: var(--secondary);
 }
 
 @media (max-width: 1100px) {
@@ -361,7 +413,6 @@ p {
   .audience-card,
   .hero__card,
   .cta {
-    border-radius: 14px;
     padding: 1rem;
   }
 
