@@ -277,58 +277,6 @@ p {
   color: var(--primary);
 }
 
-.survey-hero {
-  padding: 4.8rem 0 1.7rem;
-}
-
-.survey-form {
-  width: min(760px, calc(100% - 2rem));
-  margin: 0 auto;
-  display: grid;
-  gap: 1rem;
-}
-
-.survey-form fieldset,
-.field {
-  display: grid;
-  gap: 0.65rem;
-  padding: 1rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-}
-
-.survey-form legend,
-.field span {
-  font-weight: 700;
-  color: var(--text);
-}
-
-.survey-form label {
-  color: #334155;
-}
-
-.survey-form input[type="text"],
-.survey-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font: inherit;
-  color: var(--text);
-  background: #fbfefd;
-}
-
-.survey-form button {
-  justify-self: start;
-}
-
-.form-note {
-  min-height: 1.5rem;
-  color: var(--secondary);
-}
-
 @media (max-width: 1100px) {
   .hero {
     padding-top: 4.6rem;

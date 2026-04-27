@@ -2,40 +2,31 @@
 
 Проект: **Слотик** — мобильная платформа для автоматизации записей к частным специалистам.
 
-## Что сдавать
+## Уже готово
 
-1. Ссылка на анкету Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSd2UF9n2NTWk8AQtmJ6dLt0S4e8UnGEuY1b_GqVrK6CeEAQWQ/viewform
-2. Ссылка на лендинг с анкетой: `https://vladoz2008.github.io/Slotik/`.
-3. Ссылка на Google Sheets с ответами: https://docs.google.com/spreadsheets/d/1KAKYqT0Ln9IZtZO9Ed7D0BlsJ2SC8SfH3L21F40rqxk/edit
-4. CSV с результатами: `data/slotik_survey_responses_demo.csv`.
-5. Excel-файл с аналитикой: `data/slotik_survey_analysis_demo.xlsx`.
-6. Краткий текстовый вывод: `docs/slotik_analysis_conclusions.md`.
+- Анкета Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSd2UF9n2NTWk8AQtmJ6dLt0S4e8UnGEuY1b_GqVrK6CeEAQWQ/viewform
+- Лендинг с переходом на анкету: https://vladoz2008.github.io/Slotik/
+- Google Sheets с ответами: https://docs.google.com/spreadsheets/d/1KAKYqT0Ln9IZtZO9Ed7D0BlsJ2SC8SfH3L21F40rqxk/edit
+- Инструкция по аналитике: `docs/analytics_guide.md`
 
-## Как создать Google Forms
+## Что сдавать после сбора ответов
 
-В папке `google_forms` лежит готовый Apps Script:
+1. Ссылку на Google Forms.
+2. Ссылку на лендинг.
+3. CSV или Excel-файл с реальными ответами из Google Forms.
+4. Excel-файл с аналитикой по реальным ответам.
+5. Краткий текстовый вывод по результатам исследования.
 
-`google_forms/create_slotik_form.gs`
+## Как провести аналитику
 
-Он создает:
+После того как в форме будет минимум 15 ответов, откройте `docs/analytics_guide.md` и выполните инструкцию:
 
-- Google Form «Анкета по проекту „Слотик“»;
-- 12 вопросов по требованиям задания;
-- Google Sheets-таблицу для сбора ответов;
-- ссылки на форму, редактирование формы и таблицу ответов в журнале выполнения.
+1. скачайте реальные ответы из Google Sheets;
+2. создайте Excel-файл с отдельными листами;
+3. посчитайте проценты по закрытым вопросам;
+4. сгруппируйте открытые ответы;
+5. сформулируйте выводы по гипотезе проблемы и интересу к решению.
 
-Уже созданная форма:
+## Google Forms
 
-- Для респондентов: https://docs.google.com/forms/d/e/1FAIpQLSd2UF9n2NTWk8AQtmJ6dLt0S4e8UnGEuY1b_GqVrK6CeEAQWQ/viewform
-- Для редактирования: https://docs.google.com/forms/d/1qTlTZQ8-xut5T3X2KreYHR_SXWMurphYOdWDv_BJwxY/edit
-- Таблица ответов: https://docs.google.com/spreadsheets/d/1KAKYqT0Ln9IZtZO9Ed7D0BlsJ2SC8SfH3L21F40rqxk/edit
-
-Инструкция по запуску: `google_forms/README.md`.
-
-## Важная пометка
-
-Файлы `slotik_survey_responses_demo.csv` и `slotik_survey_analysis_demo.xlsx` содержат демонстрационные учебные ответы на 15 респондентов. Для финальной сдачи после настоящего опроса нужно заменить строки в CSV на реальные ответы и пересобрать аналитику.
-
-## Краткий вывод
-
-В демонстрационной выборке гипотеза проекта подтверждается: пользователи сталкиваются с ручным согласованием времени, ожиданием ответа, отсутствием видимых свободных слотов и риском забыть о записи. Наиболее сильные функции для развития MVP: публичный профиль специалиста со свободными слотами, запись без переписки, автоматические напоминания, интеграция с календарем и привычными каналами вроде Telegram.
+В папке `google_forms` лежит Apps Script `create_slotik_form.gs`. Он нужен только если форму придется создать заново.
