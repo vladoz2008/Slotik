@@ -4,7 +4,11 @@
 
 ## Как вести канбан
 
-Основной формат задач - GitHub Issues. Их можно смотреть как список в разделе `Issues`, а при подключении GitHub Projects - как канбан-доску.
+Основной формат задач - GitHub Issues. Они добавлены в GitHub Project:
+
+https://github.com/users/vladoz2008/projects/1
+
+Проект связан с репозиторием `vladoz2008/Slotik`.
 
 Рекомендуемые колонки:
 
@@ -33,23 +37,28 @@
 - конкретный результат;
 - критерии готовности.
 
-## Как создать GitHub Projects-доску вручную
+## Как открыть канбан
 
-Если нужна именно визуальная доска GitHub Projects:
+1. Откройте https://github.com/users/vladoz2008/projects/1.
+2. Используйте поле `Status` как основную колонку канбана.
+3. Для планирования смотрите `Phase`, `Priority`, `Size`, `Estimate` и `Target date`.
 
-1. Откройте репозиторий https://github.com/vladoz2008/Slotik.
-2. Перейдите во вкладку `Projects`.
-3. Нажмите `New project`.
-4. Выберите шаблон `Board`.
-5. Назовите доску `Project Slotik`.
-6. Добавьте поле `Status` со статусами: `Backlog`, `Ready`, `In progress`, `Review`, `Done`.
-7. Добавьте созданные Issues на доску.
+Если в интерфейсе GitHub нужен отдельный вид именно в формате доски, создайте новый view внутри Project и сгруппируйте его по `Status`.
 
-После этого все новые задачи из Issues можно привязывать к проекту и двигать по колонкам.
+## Настроенные поля
+
+- `Status` - текущее состояние задачи.
+- `Area` - направление работы: Research, Product, Design, Engineering, Docs.
+- `Phase` - этап проекта: Discovery, MVP Planning, Design, Build, Launch.
+- `Priority` - важность задачи: P0, P1, P2.
+- `Size` - примерный размер задачи.
+- `Estimate` - оценка трудозатрат.
+- `Start date` и `Target date` - плановые даты.
+- `Result` - ожидаемый результат задачи.
 
 ## Автоматизация через GitHub CLI
 
-Issues уже созданы и перечислены в `docs/backlog.md`. Создание самой GitHub Projects-доски через CLI сейчас требует дополнительный scope `project`.
+Issues уже созданы и перечислены в `docs/backlog.md`. Для редактирования GitHub Projects через CLI нужен scope `project`.
 
 Команда для выдачи прав:
 
@@ -57,8 +66,8 @@ Issues уже созданы и перечислены в `docs/backlog.md`. С�
 gh auth refresh -s project
 ```
 
-После этого можно создать доску:
+После этого можно редактировать проект:
 
 ```powershell
-gh project create --owner vladoz2008 --title "Project Slotik"
+gh project view 1 --owner vladoz2008
 ```

@@ -1,6 +1,10 @@
 # Backlog Slotik
 
-Стартовый бэклог создан в GitHub Issues. Эти задачи можно добавить на GitHub Projects-доску `Project Slotik`, когда для GitHub CLI будет выдан scope `project`.
+Стартовый бэклог создан в GitHub Issues и добавлен в GitHub Project:
+
+https://github.com/users/vladoz2008/projects/1
+
+В проекте настроены поля `Status`, `Area`, `Phase`, `Priority`, `Size`, `Estimate`, `Start date`, `Target date` и `Result`.
 
 ## Research
 

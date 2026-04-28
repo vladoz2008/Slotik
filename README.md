@@ -6,6 +6,7 @@ Slotik - проект мобильной платформы для автома�
 
 - Лендинг: https://vladoz2008.github.io/Slotik/
 - Репозиторий: https://github.com/vladoz2008/Slotik
+- GitHub Project: https://github.com/users/vladoz2008/projects/1
 - Анкета Google Forms: https://docs.google.com/forms/d/e/1FAIpQLSd2UF9n2NTWk8AQtmJ6dLt0S4e8UnGEuY1b_GqVrK6CeEAQWQ/viewform
 - Таблица ответов Google Sheets: https://docs.google.com/spreadsheets/d/1KAKYqT0Ln9IZtZO9Ed7D0BlsJ2SC8SfH3L21F40rqxk/edit
 - Notion проекта: https://www.notion.so/344537a58c758020a4f1ffd3e265e3e8
